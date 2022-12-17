@@ -15,6 +15,11 @@ public class NationalPark {
 	private int id;
 	
 	private String name;
+	private String state;
+	private int acres;
+	private double latitude;
+	private double longitude;
+	private String description;
 	
 	public NationalPark() {}
 
@@ -34,10 +39,51 @@ public class NationalPark {
 		this.name = name;
 	}
 
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public int getAcres() {
+		return acres;
+	}
+
+	public void setAcres(int acres) {
+		this.acres = acres;
+	}
+
+	public double getLatitude() {
+		return latitude;
+	}
+
+	public void setLatitude(double latitude) {
+		this.latitude = latitude;
+	}
+
+	public double getLongitude() {
+		return longitude;
+	}
+
+	public void setLongitude(double longitude) {
+		this.longitude = longitude;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
 	@Override
 	public String toString() {
-		return "NationalPark [id=" + id + ", name=" + name + "]";
+		return "NationalPark [id=" + id + ", name=" + name + ", state=" + state + ", acres=" + acres + ", latitude="
+				+ latitude + ", longitude=" + longitude + ", description=" + description + "]";
 	}
-	
+
 	
 }
