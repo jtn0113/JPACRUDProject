@@ -17,3 +17,9 @@ If you click update, you'll be shown a form to update that parks information. Th
 ![Park update](https://i.imgur.com/Hfg5qc6.png?raw=true "update")
 To add a new park, navigate to the home page. On the top left corner under home is a "Add Park" link. Click this link and you will be shown a form to fill out with the new parks data. Click the create button and the park will be created. You will be taken to the home page, where you will see your new park on the list.
 ![Park add](https://i.imgur.com/UXUHmZN.png?raw=true "add")
+
+### Technologies Used
+Java, SQL, Spring, JPA, HTML, CSS, Bootstrap, Git
+
+### Lessons Learned
+Some lessons I learned with this project were creating my own database, creating a CRUD project using JPA, mapping Entities to SQL, using JUnit tests, using Spring with JPA
