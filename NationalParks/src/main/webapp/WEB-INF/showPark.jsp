@@ -13,6 +13,7 @@
 	<a href="home.do">Home</a><br>
 	<div class="container">
 	<h1>${park.name }</h1>
+	<img alt="Image of ${park.name }" src="${park.image }">
 	<table>
 		<tr>
 			<th>State</th>

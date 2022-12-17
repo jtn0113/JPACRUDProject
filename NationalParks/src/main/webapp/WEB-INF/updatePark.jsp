@@ -34,6 +34,10 @@
 			<input class="form-control" name="longitude" value="${park.longitude }">
 		</div>
 		<div class="form-group">
+			<label>Image URL:</label>
+			<input class="form-control" name="image" value="${park.image }">
+		</div>
+		<div class="form-group">
 			<label>Description:</label>
 			<input class="form-control" name="description" value="${park.description }">
 		</div>

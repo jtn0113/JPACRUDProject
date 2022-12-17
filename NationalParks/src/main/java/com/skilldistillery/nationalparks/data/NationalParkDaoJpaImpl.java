@@ -42,6 +42,7 @@ public class NationalParkDaoJpaImpl implements NationalParkDAO {
 		managedPark.setAcres(park.getAcres());
 		managedPark.setLatitude(park.getLatitude());
 		managedPark.setLongitude(park.getLongitude());
+		managedPark.setImage(park.getImage());
 		managedPark.setDescription(park.getDescription());
 		
 		return managedPark;

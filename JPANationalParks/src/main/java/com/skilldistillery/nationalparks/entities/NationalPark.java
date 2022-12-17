@@ -12,22 +12,23 @@ public class NationalPark {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Integer id;
 	
 	private String name;
 	private String state;
-	private int acres;
-	private double latitude;
-	private double longitude;
+	private Integer acres;
+	private Double latitude;
+	private Double longitude;
+	private String image;
 	private String description;
 	
 	public NationalPark() {}
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -47,28 +48,36 @@ public class NationalPark {
 		this.state = state;
 	}
 
-	public int getAcres() {
+	public Integer getAcres() {
 		return acres;
 	}
 
-	public void setAcres(int acres) {
+	public void setAcres(Integer acres) {
 		this.acres = acres;
 	}
 
-	public double getLatitude() {
+	public Double getLatitude() {
 		return latitude;
 	}
 
-	public void setLatitude(double latitude) {
+	public void setLatitude(Double latitude) {
 		this.latitude = latitude;
 	}
 
-	public double getLongitude() {
+	public Double getLongitude() {
 		return longitude;
 	}
 
-	public void setLongitude(double longitude) {
+	public void setLongitude(Double longitude) {
 		this.longitude = longitude;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
 	}
 
 	public String getDescription() {

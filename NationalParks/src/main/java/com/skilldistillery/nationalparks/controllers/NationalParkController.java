@@ -55,8 +55,6 @@ public class NationalParkController {
 	
 	@RequestMapping("updatePark.do")
 	public String updatePark(NationalPark park, Model model) {
-		System.out.println(park.getId());
-		System.out.println(park);
 		dao.update(park.getId(), park);
 		model.addAttribute("park", park);
 		return "showPark";

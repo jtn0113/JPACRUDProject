@@ -33,6 +33,10 @@
 			<input class="form-control" name="longitude">
 		</div>
 		<div class="form-group">
+			<label>Image URL:</label>
+			<input class="form-control" name="image">
+		</div>
+		<div class="form-group">
 			<label>Description:</label>
 			<input class="form-control" name="description">
 		</div>
