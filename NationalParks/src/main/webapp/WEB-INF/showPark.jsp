@@ -10,6 +10,8 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 <body>
+	<a href="home.do">Home</a><br>
+	<div class="container">
 	<h1>${park.name }</h1>
 	<table>
 		<tr>
@@ -33,5 +35,9 @@
 			<td>${park.description }</td>
 		</tr>
 	</table>
+	<a href="updateParkForm.do?fid=${park.id }"><button type="submit" class="btn btn-success">Update</button></a>
+	<a href="deletePark.do?fid=${park.id }"><button type="submit" class="btn btn-danger">Delete</button></a>
+
+	</div>
 </body>
 </html>

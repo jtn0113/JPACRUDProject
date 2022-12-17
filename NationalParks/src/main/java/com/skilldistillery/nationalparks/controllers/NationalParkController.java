@@ -28,4 +28,37 @@ public class NationalParkController {
 		return "showPark";
 	}
 	
+	@RequestMapping("createForm.do")
+	public String goToCreateForm(Model model) {
+		return "createPark";
+	}
+	
+	@RequestMapping("createPark.do")
+	public String createPark(NationalPark park, Model model) {
+		dao.create(park);
+		model.addAttribute("park", park);
+		return "showPark";
+	}
+	
+	@RequestMapping("deletePark.do")
+	public String removePark(@RequestParam int fid) {
+		dao.delete(fid);
+		return "home";
+	}
+	
+	@RequestMapping("updateParkForm.do")
+	public String goToUpdateForm(@RequestParam int fid, Model model) {
+		NationalPark park = dao.findById(fid);
+		model.addAttribute("park", park);
+		return "updatePark";
+	}
+	
+	@RequestMapping("updatePark.do")
+	public String updatePark(NationalPark park, Model model) {
+		System.out.println(park.getId());
+		System.out.println(park);
+		dao.update(park.getId(), park);
+		model.addAttribute("park", park);
+		return "showPark";
+	}
 }

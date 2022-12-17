@@ -30,20 +30,33 @@ public class NationalParkDaoJpaImpl implements NationalParkDAO {
 
 	@Override
 	public NationalPark create(NationalPark park) {
-		// TODO Auto-generated method stub
-		return null;
+		em.persist(park);
+		return park;
 	}
 
 	@Override
 	public NationalPark update(int parkId, NationalPark park) {
-		// TODO Auto-generated method stub
-		return null;
+		NationalPark managedPark = em.find(NationalPark.class, parkId);
+		managedPark.setName(park.getName());
+		managedPark.setState(park.getState());
+		managedPark.setAcres(park.getAcres());
+		managedPark.setLatitude(park.getLatitude());
+		managedPark.setLongitude(park.getLongitude());
+		managedPark.setDescription(park.getDescription());
+		
+		return managedPark;
 	}
 
 	@Override
 	public boolean delete(int parkId) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean removed = false;
+		NationalPark park = em.find(NationalPark.class, parkId);
+		em.remove(park);
+		
+		if(park == null) {
+			removed = true;
+		}
+		return removed;
 	}
 
 }

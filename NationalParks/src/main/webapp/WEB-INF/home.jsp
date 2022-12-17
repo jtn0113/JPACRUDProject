@@ -10,16 +10,21 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 <body>
+	<a href="home.do">Home</a><br>
+	<a href="createForm.do">Add Park</a>
+	<div class="container">
 	<header>
 		<h1>Welcome to the US National Parks Explorer</h1>
 	</header>
 
-			<table>
-			<c:forEach var="park" items="${parkList }">
-				<a href="showPark.do?fid=${park.id }">${park.name }</a>
-				<br>
-			</c:forEach>
-			</table>
+	<table>
+	<c:forEach var="park" items="${parkList }">
+		<a href="showPark.do?fid=${park.id }">${park.name }</a>
+		<br>
+	</c:forEach>
+	</table>
+	</div>
+	
 
 </body>
 </html>
