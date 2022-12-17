@@ -17,12 +17,12 @@
 		<h1>Welcome to the US National Parks Explorer</h1>
 	</header>
 
-	<table>
+	<div class="list-group">
 	<c:forEach var="park" items="${parkList }">
-		<a href="showPark.do?fid=${park.id }">${park.name }</a>
+		<a href="showPark.do?fid=${park.id }" class="list-group-item list-group-item-action list-group-item-primary">${park.name }</a>
 		<br>
 	</c:forEach>
-	</table>
+	</div>
 	</div>
 	
 	<img alt="" src="https://en.wikipedia.org/wiki/List_of_national_parks_of_the_United_States#/media/File:Bass_Harbor_Head_Light_Station_2016.jpg">

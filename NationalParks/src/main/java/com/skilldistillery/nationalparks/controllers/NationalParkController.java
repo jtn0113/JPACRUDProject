@@ -41,8 +41,9 @@ public class NationalParkController {
 	}
 	
 	@RequestMapping("deletePark.do")
-	public String removePark(@RequestParam int fid) {
+	public String removePark(@RequestParam int fid, Model model) {
 		dao.delete(fid);
+		model.addAttribute("parkList", dao.findAll());
 		return "home";
 	}
 	

@@ -24,7 +24,7 @@ public class NationalParkDaoJpaImpl implements NationalParkDAO {
 
 	@Override
 	public List<NationalPark> findAll() {
-		String jpql = "SELECT p FROM NationalPark p";
+		String jpql = "SELECT p FROM NationalPark p ORDER BY p.name";
 		return em.createQuery(jpql, NationalPark.class).getResultList();
 	}
 
